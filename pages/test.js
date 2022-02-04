@@ -33,7 +33,7 @@ export default function test() {
 
   const handleGETWithHeader = async () => {
     const res = await fetch(
-      "http://localhost:5000/api/get/header?name=get&number=100",
+      "http://localhost:5000/api/header/get?name=get&number=100",
       {
         headers: {
           "Access-Control-Request-Private-Network": "true",
@@ -45,7 +45,7 @@ export default function test() {
   };
 
   const handlePOSTWithHeader = async () => {
-    const res = await fetch("http://localhost:5000/api/post/header", {
+    const res = await fetch("http://localhost:5000/api/header/post", {
       method: "POST",
       body: JSON.stringify({ name: "post", number: 100 }),
       headers: {
@@ -58,7 +58,7 @@ export default function test() {
   };
 
   const handlePUTWithHeader = async () => {
-    const res = await fetch("http://localhost:5000/api/put/header", {
+    const res = await fetch("http://localhost:5000/api/header/put", {
       method: "PUT",
       body: JSON.stringify({ name: "put", number: 100 }),
       headers: {
